@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mps_fe/screens/grouppage.dart';
 import 'package:mps_fe/screens/homepage.dart';
 
 void main() {
@@ -14,6 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'MPS',
       routes: {
         "/home": (context) => const HomePage(),
+        "/grouppage": (context) => const GroupPage(),
       },
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
