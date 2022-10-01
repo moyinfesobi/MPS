@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mps_fe/screens/envangelism.dart';
 import 'package:mps_fe/screens/grouppage.dart';
 import 'package:mps_fe/screens/homepage.dart';
 
@@ -16,57 +17,15 @@ class MyApp extends StatelessWidget {
       routes: {
         "/home": (context) => const HomePage(),
         "/grouppage": (context) => const GroupPage(),
+        "/envangelism": (context) => const EnvangelismPage()
       },
+      initialRoute:  "/home",
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const Scaffold(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
- 
-
-
-  @override
-  Widget build(BuildContext context) {
-    
-    return Scaffold(
-      appBar: AppBar(
-       
-        title: Text(widget.title),
-      ),
-      body: Center(
-       
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-           
-            Text(
-              'lorem ipsum dolor',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {Navigator.of(context).pushNamed("/home");
-        } ,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
-    );
-  }
-}
