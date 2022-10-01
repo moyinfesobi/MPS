@@ -67,14 +67,18 @@ class GroupPage extends StatelessWidget {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Container(
+                  GestureDetector(
+                       onTap: ()  {Navigator.of(context).pushNamed("/envangelism");
+        } ,
+                    child: Container(
                       margin: const EdgeInsets.all(1),
                       padding: const EdgeInsets.all(10),
                       height: MediaQuery.of(context).size.height * 0.25,
                       width: MediaQuery.of(context).size.width * 0.4,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(40),
-                        color: Color.fromRGBO(49, 83, 153, 1),
+                        image: DecorationImage(image: AssetImage("assets/images/envangelism.png"), fit: BoxFit.cover),
+                        // color: Color.fromRGBO(49, 83, 153, 1),
                       ),
                       child: Center(
                         child: Text(
@@ -85,7 +89,9 @@ class GroupPage extends StatelessWidget {
                                   fontSize: 14,
                                   fontWeight: FontWeight.w400)),
                         ),
-                      )),
+                      )),),
+                  
+
                   Container(
                       margin: const EdgeInsets.only(
                           top: 1, bottom: 1, left: 17, right: 1),
@@ -94,11 +100,13 @@ class GroupPage extends StatelessWidget {
                       width: MediaQuery.of(context).size.width * 0.4,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(40),
-                        color: Color.fromRGBO(62, 82, 122, 1),
+                          image: DecorationImage(image: AssetImage("assets/images/testimony.png"), fit: BoxFit.cover),
+                       
+                        // color: Color.fromRGBO(62, 82, 122, 1),
                       ),
                       child: Center(
                         child: Text(
-                          "Testumony",
+                          "Testimony",
                           style: GoogleFonts.poppins(
                               textStyle: const TextStyle(
                                   color: Colors.white,
@@ -122,7 +130,9 @@ class GroupPage extends StatelessWidget {
                       width: MediaQuery.of(context).size.width * 0.4,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(40),
-                        color: Color.fromRGBO(62, 82, 122, 11),
+                         image: DecorationImage(image: AssetImage("assets/images/converts.png"), fit: BoxFit.cover),
+                       
+                        // color: Color.fromRGBO(62, 82, 122, 11),
                       ),
                       child: Center(
                         child: Text(
@@ -142,7 +152,9 @@ class GroupPage extends StatelessWidget {
                       width: MediaQuery.of(context).size.width * 0.4,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(40),
-                        color: Color.fromRGBO(244, 133, 51, 0.54),
+                         image: DecorationImage(image: AssetImage("assets/images/prayers.png"), fit: BoxFit.cover),
+                       
+                        // color: Color.fromRGBO(244, 133, 51, 0.54),
                       ),
                       child: Center(
                         child: Text(
@@ -171,7 +183,9 @@ class GroupPage extends StatelessWidget {
                       width: MediaQuery.of(context).size.width * 0.4,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(40),
-                        color: Color.fromRGBO(62, 82, 122, 11),
+                          image: DecorationImage(image: AssetImage("assets/images/firsttimers.png"), fit: BoxFit.cover),
+                       
+                        // color: Color.fromRGBO(62, 82, 122, 11),
                       ),
                       child: Center(
                         child: Text(
@@ -191,7 +205,9 @@ class GroupPage extends StatelessWidget {
                       width: MediaQuery.of(context).size.width * 0.4,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(40),
-                        color: Color.fromRGBO(244, 133, 51, 0.54),
+                         image: DecorationImage(image: AssetImage("assets/images/feedback.png"), fit: BoxFit.cover),
+                       
+                        // color: Color.fromRGBO(244, 133, 51, 0.54),
                       ),
                       child: Center(
                         child: Text(
