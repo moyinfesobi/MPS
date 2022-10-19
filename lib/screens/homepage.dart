@@ -41,11 +41,15 @@ class HomePage extends StatelessWidget {
                               fontWeight: FontWeight.w300,
                               color: Color.fromRGBO(49, 83, 153, 1))),
                     ),
-                    Image.asset(
-                      "assets/images/user.png",
-                      width: 40,
-                      height: 40,
-                    )
+                    GestureDetector(
+                      onTap: () =>
+                          {Navigator.of(context).pushNamed("/profile")},
+                      child: Image.asset(
+                        "assets/images/user.png",
+                        width: 40,
+                        height: 40,
+                      ),
+                    ),
                   ],
                 )),
             Container(
@@ -53,32 +57,30 @@ class HomePage extends StatelessWidget {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                   GestureDetector(
-                      onTap: ()  {Navigator.of(context).pushNamed("/grouppage");
-        } ,
-                      child:  Container(
-                    
-                      margin: const EdgeInsets.all(1),
-                      padding: const EdgeInsets.all(10),
-                      height: MediaQuery.of(context).size.height * 0.25,
-                      width: MediaQuery.of(context).size.width * 0.4,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(40),
-                        color: Color.fromRGBO(49, 83, 153, 1),
-                      ),
-                      child: Center(
-                        
-                        child: Text(
-                          "Add your reports here",
-                          style: GoogleFonts.poppins(
-                              textStyle: const TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400)),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).pushNamed("/grouppage");
+                    },
+                    child: Container(
+                        margin: const EdgeInsets.all(1),
+                        padding: const EdgeInsets.all(10),
+                        height: MediaQuery.of(context).size.height * 0.25,
+                        width: MediaQuery.of(context).size.width * 0.4,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(40),
+                          color: Color.fromRGBO(49, 83, 153, 1),
                         ),
-                      )),
-                   ),
-
+                        child: Center(
+                          child: Text(
+                            "Add your reports here",
+                            style: GoogleFonts.poppins(
+                                textStyle: const TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w400)),
+                          ),
+                        )),
+                  ),
                   Container(
                       margin: const EdgeInsets.only(
                           top: 1, bottom: 1, left: 17, right: 1),
