@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:mps_fe/screens/converts.dart';
 import 'package:mps_fe/screens/envangelism.dart';
+import 'package:mps_fe/screens/firsttimers.dart';
 import 'package:mps_fe/screens/grouppage.dart';
 import 'package:mps_fe/screens/homepage.dart';
+import 'package:mps_fe/screens/prayer.dart';
+import 'package:mps_fe/screens/testimony.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +21,11 @@ class MyApp extends StatelessWidget {
       routes: {
         "/home": (context) => const HomePage(),
         "/grouppage": (context) => const GroupPage(),
-        "/envangelism": (context) => const EnvangelismPage()
+        "/envangelism": (context) => const EnvangelismPage(),
+        "/prayer": (context) => const PrayerPage(),
+        "/converts": (context) => const ConvertsPage() ,
+        "/testimony": (context) => const TestimonyPage() ,
+        "/firsttimers": (context) => const FirstTimersPage(),
       },
       initialRoute:  "/home",
       debugShowCheckedModeBanner: false,
